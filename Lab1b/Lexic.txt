@@ -46,7 +46,7 @@ Lexic:
 
 		- operators + - * / < > <= == >= <> 
 
-		- separators [ ] { }  : ; space
+		- separators () [ ] { }  : ; space ,
 
 		- reserved words: decla arr char do else if int string char while show read with
 
@@ -60,18 +60,18 @@ Lexic:
 		
 		digit_excluding_zero = "1" | "2" |...| "9"
 		
-		digit = "0" | digit excluding zero
+		digit = "0" | digit_excluding_zero
 
 
     c.constants
 	
 		1.integer - rule:
 
-			nr = ["-" | "+"] digit excluding zero {digit} | "0" 
+			nr = ["-" | "+"] digit_excluding_zero {digit} | "0" 
 			
-			digit excluding zero = "1" | "2" |...| "9"
+			digit_excluding_zero = "1" | "2" |...| "9"
 		
-			digit = "0" | digit excluding zero
+			digit = "0" | digit_excluding_zero
 
 		2.character
 
