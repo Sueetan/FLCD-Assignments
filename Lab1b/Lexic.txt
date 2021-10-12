@@ -48,7 +48,7 @@ Lexic:
 
 		- separators [ ] { }  : ; space
 
-		- reserved words: decla array char const do else if int of program then var while show read with
+		- reserved words: decla arr char do else if int string char while show read with
 
     b.identifiers
 
