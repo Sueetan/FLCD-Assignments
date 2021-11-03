@@ -12,3 +12,6 @@ class SymbolTable:
 
     def getSize(self):
         return self.__hashTable.getSize()
+
+    def __str__(self):
+        return str(self.__hashTable)

@@ -14,7 +14,7 @@ class HashTable:
         hash_key = self.hash(key)
         i = 0
         for i in range(len(self.hash_table[hash_key])):
-            if self.hash_table[hash_key] == key:
+            if self.hash_table[hash_key][i] == key:
                 return (hash_key, i)
         self.hash_table[hash_key].append(key)
         return (hash_key, i + 1)
@@ -32,3 +32,17 @@ class HashTable:
     def getSize(self):
         return self.__size
 
+    def __str__(self):
+        result = ""
+        for elem in range(len(self.hash_table)):
+            if len(self.hash_table[elem]) == 0:
+                continue
+            resultStr = "{:<3} -> ".format(str(elem))
+
+            for element in self.hash_table[elem]:
+                resultStr += "{:<10} | ".format(element)
+            result += resultStr + "\n"
+
+        if result == "":
+            return "{}"
+        return result

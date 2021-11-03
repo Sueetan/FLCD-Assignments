@@ -1,17 +1,11 @@
-from SymbolTable import SymbolTable
+from HashTable import HashTable
+from Scanner import Scanner
 
-size = 10
 
-symbolTable = SymbolTable(size)
+scanner = Scanner()
 
-smt = 0
-for i in range(size):
-    smt = symbolTable.add(i)
+scanner.run()
 
-for i in range(5):
-    smt = symbolTable.add(i)
-    print(smt)
+print()
 
-for i in range(5):
-    smt = symbolTable.add(i)
-    print(smt)
+print()
